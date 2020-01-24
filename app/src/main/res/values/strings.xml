@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wesal</string>
+    <string name="donate_products">Donate products</string>
+    <string name="sharing_activity">Sharing Activity</string>
+    <string name="choose_the_charity">Choose the charity</string>
+    <string name="search_for_blood">Search for Blood</string>
+    <string name="donate_money">Donate Money</string>
+    <string name="call">Call</string>
+    <string name="home">Home</string>
+</resources>
