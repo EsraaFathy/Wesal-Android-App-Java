@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bold_category_icon"
+        android:title="@string/donate_bold"
+        android:icon="@drawable/ic_blood_donation"/>
+    <item
+        android:id="@+id/money_category_icon"
+        android:title="@string/donate_money"
+        android:icon="@drawable/ic_mony"/>
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/matrial_category_icon"
+        android:title="@string/donate_products"
+        android:icon="@drawable/ic_martial"/>
+    <item
+        android:id="@+id/time_category_icon"
+        android:title="@string/donate_time"
+        android:icon="@drawable/ic_time"/>
+</menu>
