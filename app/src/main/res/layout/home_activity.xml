@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0EDEB"
+    android:background="@color/background_not_whit"
     tools:context=".Home_Activity">
 
     <androidx.appcompat.widget.Toolbar
@@ -19,7 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:title="@string/home"
-        app:titleTextColor="#fff" />
+        app:titleTextColor="#fff">
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -53,6 +54,7 @@
         app:layout_constraintGuide_percent=".2" />
 
     <Spinner
+        android:entries="@array/charities"
         android:layout_width="350dp"
         android:layout_height="0dp"
         android:popupBackground="@drawable/spinner_shape"
@@ -71,6 +73,7 @@
         app:layout_constraintGuide_percent=".3" />
 
     <LinearLayout
+        android:id="@+id/donate_material_home_activity"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="15dp"
@@ -249,6 +252,15 @@
             android:textColor="#fff"
             android:textSize="20sp"
             android:typeface="monospace" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:id="@+id/charityProfileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_for_splash"
+            android:src="@drawable/logo" />
     </LinearLayout>
 
 

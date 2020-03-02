@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Charties_Catigory"></activity>
+        <activity android:name=".SearchForBlood"></activity>
+        <activity android:name=".Charties_Catigory" />
         <activity android:name=".Home_Activity" />
         <activity android:name=".SplashScreen">
             <intent-filter>

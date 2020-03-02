@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Wesal</string>
-    <string name="donate_products">Donate products</string>
-    <string name="sharing_activity">Sharing Activity</string>
+    <string name="donate_products">Products</string>
+    <string name="sharing_activity">Activity</string>
     <string name="choose_the_charity">Choose the charity</string>
-    <string name="search_for_blood">Search for Blood</string>
-    <string name="donate_money">Donate Money</string>
+    <string name="search_for_blood">Blood</string>
+    <string name="donate_money">Money</string>
     <string name="call">Call</string>
     <string name="home">Home</string>
     <string name="donate_bold">Donate Bold</string>
@@ -12,4 +12,31 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="notes">Notes</string>
+    <string name="add_image">add image</string>
+    <string name="submit">Submit</string>
+    <string name="select_your_blood_type">Select Your Blood Type</string>
+    <string name="enter_your_id">Enter your ID...</string>
+    <string name="enter">Enter</string>
+    <string name="choose_material_type">Choose Material Type..</string>
+
+    <string-array name="Blood_Types">
+        <item>select your blood type</item>
+        <item>O-</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>A+</item>
+        <item>B-</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string-array name="charities">
+        <item>Resala</item>
+        <item>Sona3 El7aya</item>
+    </string-array>
 </resources>

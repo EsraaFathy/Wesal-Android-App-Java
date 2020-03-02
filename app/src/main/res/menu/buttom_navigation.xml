@@ -10,10 +10,6 @@
         android:title="@string/donate_money"
         android:icon="@drawable/ic_mony"/>
     <item
-        android:id="@+id/home"
-        android:title="@string/home"
-        android:icon="@drawable/ic_home"/>
-    <item
         android:id="@+id/matrial_category_icon"
         android:title="@string/donate_products"
         android:icon="@drawable/ic_martial"/>

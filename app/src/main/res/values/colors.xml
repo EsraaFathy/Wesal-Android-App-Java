@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="greenDark">#60209F</color>
     <color name="greenLight">#D89C5DD8</color>
-<!--    <color name="greenDark">#D81B761B</color>-->
+    <color name="background_not_whit">#F0EDEB</color>
+    <!--    <color name="greenDark">#D81B761B</color>-->
 <!--    <color name="greenLight">#66D064</color>-->
 </resources>
