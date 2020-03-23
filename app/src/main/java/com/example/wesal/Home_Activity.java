@@ -41,7 +41,7 @@ public class Home_Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
         if (id==R.id.searchForBlood){
-            startActivity(new Intent(Home_Activity.this,SearchForBlood.class));
+            startActivity(new Intent(Home_Activity.this,SearchMap.class));
         }
         return super.onOptionsItemSelected(item);
     }

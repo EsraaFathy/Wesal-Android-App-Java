@@ -39,4 +39,5 @@
         <item>Resala</item>
         <item>Sona3 El7aya</item>
     </string-array>
+    <string name="title_activity_search_map">Map</string>
 </resources>
