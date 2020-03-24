@@ -20,6 +20,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,9 +29,7 @@ import com.google.android.gms.tasks.Task;
 public class SearchMap extends FragmentActivity implements
         OnMapReadyCallback {
 
-    Location currantLocation;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    private static final int REQUEST_CODE = 101;
+
 
     private GoogleMap mMap;
 
@@ -43,57 +42,26 @@ public class SearchMap extends FragmentActivity implements
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-
-        String provider = locationManager.getBestProvider(criteria, true);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,new String[]
-                    {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
-            return;
-        }
-        assert provider != null;
-        currantLocation = locationManager.getLastKnownLocation(provider);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        fetchLocation();
     }
 
-    private void fetchLocation() {
-
-        Task<Location> task = fusedLocationProviderClient.getLastLocation();
-        task.addOnSuccessListener(new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                if (location != null){
-                    currantLocation=location;
-                    Toast.makeText(SearchMap.this, currantLocation.getLatitude() +" ___ "+ currantLocation.getLongitude(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 151);
-        LatLng latLng=new LatLng(currantLocation.getLatitude(),currantLocation.getLongitude());
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.addMarker(new MarkerOptions().position(latLng).title("my location"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        LatLng charityLocation = new LatLng(30.5897712,31.4983268);
+        mMap.addMarker(new MarkerOptions().position(charityLocation).title("جمعية رسالة")).showInfoWindow();
+
+//        mMap.addMarker(new MarkerOptions().position(charityLocation).title("جمعية رسالة")
+//                .icon(BitmapDescriptorFactory.fromBitmap())
+//        ).showInfoWindow();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(charityLocation,10));
+
+
+
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case REQUEST_CODE:
-                if (grantResults.length>0&&grantResults[0]== PackageManager.PERMISSION_GRANTED){
-                    fetchLocation();
-                }
-                break;
-        }
-    }
 }
