@@ -40,4 +40,8 @@
         <item>Sona3 El7aya</item>
     </string-array>
     <string name="title_activity_search_map">Map</string>
+    <string name="data_recorded">Data Recorder</string>
+    <string name="missed_data">Missed Data</string>
+    <string name="enter_correct_data">enter correct data</string>
+    <string name="ok">OK</string>
 </resources>

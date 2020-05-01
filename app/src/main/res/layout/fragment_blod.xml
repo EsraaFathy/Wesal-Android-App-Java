@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="@string/notes" />
         <EditText
-            android:inputType="phone"
+            android:inputType="textImeMultiLine"
             android:id="@+id/editTextNotesBlodForm"
             android:importantForAutofill="no"
             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
     </LinearLayout>
 
     <Spinner
-        android:id="@+id/blodTypes"
+        android:id="@+id/spinnerBloodTypes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -95,6 +95,7 @@
         android:layout_weight="1"
         android:background="@drawable/action_bar_shap"
         android:gravity="center"
+        android:id="@+id/textViewSubmitButtonBlodForm"
         android:text="@string/submit"
         android:textColor="#fff"
         android:textSize="20sp"
