@@ -44,4 +44,9 @@
     <string name="missed_data">Missed Data</string>
     <string name="enter_correct_data">enter correct data</string>
     <string name="ok">OK</string>
+    <string name="some_error_accurate">some error accurate</string>
+    <string name="choose_charity_frist">Choose charity first</string>
+    <string name="charity_name">charity Name</string>
+    <string name="charaity_pic">charaity pic</string>
+    <string name="about">about</string>
 </resources>

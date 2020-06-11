@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#60209F</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="greenDark">#60209F</color>
-    <color name="greenLight">#D89C5DD8</color>
+    <color name="colorPrimary">#5abd72</color>
+    <color name="colorPrimaryDark">#5abd72</color>
+    <color name="colorAccent">#5abd72</color>
+    <color name="greenDark">#5abd72</color>
+    <color name="greenLight">#1c4177</color>
     <color name="background_not_whit">#F0EDEB</color>
     <!--    <color name="greenDark">#D81B761B</color>-->
-<!--    <color name="greenLight">#66D064</color>-->
+<!--    <color name="greenLight">#1c4177</color>-->
 </resources>
