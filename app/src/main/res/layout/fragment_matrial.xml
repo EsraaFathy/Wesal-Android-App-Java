@@ -76,12 +76,12 @@
             android:text="@string/choose_material_type" />
 
         <Spinner
+            android:entries="@array/matrial_typies"
             android:id="@+id/chooseMatrialTypeSpinner"
-            android:entries="@array/charities"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20sp"
             android:background="#fff"
-            android:spinnerMode="dialog" />
+            android:spinnerMode="dropdown" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -97,7 +97,9 @@
             android:contentDescription="@string/add_image" />
     </LinearLayout>
 
-    <TextView
+    <Button
+        android:id="@+id/submitButtonMartialForm"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

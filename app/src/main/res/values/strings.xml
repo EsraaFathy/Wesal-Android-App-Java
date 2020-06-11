@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Wesal</string>
     <string name="donate_products">Products</string>
     <string name="sharing_activity">Activity</string>
@@ -19,7 +19,7 @@
     <string name="add_image">add image</string>
     <string name="submit">Submit</string>
     <string name="select_your_blood_type">Select Your Blood Type</string>
-    <string name="enter_your_id">Enter your ID...</string>
+    <string name="enter_your_id" tools:ignore="TypographyEllipsis">Enter your ID...</string>
     <string name="enter">Enter</string>
     <string name="choose_material_type">Choose Material Type..</string>
 
@@ -35,9 +35,11 @@
         <item>AB-</item>
     </string-array>
 
-    <string-array name="charities">
-        <item>Resala</item>
-        <item>Sona3 El7aya</item>
+    <string-array name="matrial_typies">
+        <item>clothes</item>
+        <item>drugs</item>
+        <item>furniture</item>
+        <item>others</item>
     </string-array>
     <string name="title_activity_search_map">Map</string>
     <string name="data_recorded">Data Recorder</string>
