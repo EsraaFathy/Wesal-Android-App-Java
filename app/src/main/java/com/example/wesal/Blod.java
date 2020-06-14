@@ -43,7 +43,7 @@ public class Blod extends Fragment {
 
         if (getArguments() != null) {
             ID = getArguments().getString("CharityID");
-            Toast.makeText(getContext(), ID, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), ID, Toast.LENGTH_SHORT).show();
 
         }
 

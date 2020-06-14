@@ -114,6 +114,9 @@ public class Home_Activity extends AppCompatActivity  {
     }
     //spionner handle
     private void spinnerMethod() {
+        if (!isNetworkAvailable()){
+            Toast.makeText(Home_Activity.this, R.string.chech_the_connection, Toast.LENGTH_SHORT).show();
+        }
         ArrayAdapter<String> spinnerAdapter =new ArrayAdapter(this,android.R.layout.simple_spinner_item,charitiesNames);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         homeActivityBinding.spinnerMainActivity.setAdapter(spinnerAdapter);

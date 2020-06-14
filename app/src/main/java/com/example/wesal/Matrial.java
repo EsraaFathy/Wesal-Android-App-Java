@@ -73,7 +73,7 @@ public class Matrial extends Fragment {
 
         if (getArguments() != null) {
             ID = getArguments().getString("CharityID");
-            Toast.makeText(getContext(), ID, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), ID, Toast.LENGTH_SHORT).show();
         }
 
         population(view);
@@ -83,7 +83,7 @@ public class Matrial extends Fragment {
             @Override
             public void onClick(View v) {
                 if (!isNetworkAvailable()) {
-                    Toast.makeText(getContext(), "check the connection", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.chech_the_connection, Toast.LENGTH_SHORT).show();
                 } else {
                     if (uploadTask != null && uploadTask.isInProgress()) {
                         openDialog();

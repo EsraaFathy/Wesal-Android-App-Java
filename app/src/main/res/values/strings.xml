@@ -51,4 +51,7 @@
     <string name="charity_name">charity Name</string>
     <string name="charaity_pic">charaity pic</string>
     <string name="about">about</string>
+    <string name="chech_the_connection">check the connection</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="your_location">Your Location</string>
 </resources>

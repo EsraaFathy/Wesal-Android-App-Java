@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".SearchMap" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchMap">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_par_Activity_charities"
+        android:layout_width="match_parent"
+        map:title="Search About Blood"
+        map:titleMarginStart="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar_shap"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:titleTextColor="#fff">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment
+        android:layout_marginTop="-10dp"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
