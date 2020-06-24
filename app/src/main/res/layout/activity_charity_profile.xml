@@ -10,15 +10,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="15dp"
         android:background="@color/background_not_whit"
         tools:context=".CharityProfile">
 
-        <ImageView
-            android:padding="10dp"
-            android:background="@drawable/action_bar_shap"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageViewEnterCharity"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:padding="5dp"
             android:layout_gravity="center"
             android:contentDescription="@string/charaity_pic"
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
@@ -32,15 +41,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="0dp"
-            app:layout_constraintGuide_percent=".4" />
+            app:layout_constraintGuide_percent=".32" />
 
         <TextView
+            android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:id="@+id/Name"
-            android:padding="3dp"
             android:text="@string/charity_name"
             android:textColor="@color/greenLight"
             android:textSize="25sp"
@@ -55,14 +63,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="0dp"
-            app:layout_constraintGuide_percent=".5" />
+            app:layout_constraintGuide_percent=".38" />
 
         <TextView
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/address"
-            android:padding="5dp"
             android:fontFamily="serif-monospace"
             android:text="@string/address"
             android:textColor="@color/greenLight"
@@ -78,9 +85,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="0dp"
-            app:layout_constraintGuide_percent=".65" />
+            app:layout_constraintGuide_percent=".5" />
 
         <TextView
+            android:id="@+id/phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -88,8 +96,6 @@
             android:text="@string/phone_number"
             android:textColor="@color/greenLight"
             android:textSize="20sp"
-            android:id="@+id/phoneNumber"
-            android:padding="5dp"
             app:layout_constraintBottom_toBottomOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,25 +107,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="0dp"
-            app:layout_constraintGuide_percent=".75" />
+            app:layout_constraintGuide_percent=".55" />
 
-        <TextView
-            android:id="@+id/about"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="serif-monospace"
-            android:text="@string/about"
-            android:textColor="@color/greenLight"
-            android:padding="5dp"
-            android:textSize="20sp"
+            android:layout_marginVertical="15dp"
+            app:cardCornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline3"
-            app:layout_constraintVertical_bias="0.005" />
+            app:layout_constraintVertical_bias="0.005">
 
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="serif-monospace"
+                android:gravity="center"
+                android:text="@string/about"
+                android:textColor="@color/greenLight"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

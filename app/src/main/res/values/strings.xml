@@ -54,4 +54,9 @@
     <string name="chech_the_connection">check the connection</string>
     <string name="title_activity_maps">Map</string>
     <string name="your_location">Your Location</string>
+    <string name="don_t_have_an_id">Don`t have an id?</string>
+    <string name="get_id_her">Get ID her</string>
+    <string name="time">Time</string>
+    <string name="for_volunteers_only">For volunteers Only</string>
+    <string name="incorrect_id">Incorrect ID</string>
 </resources>

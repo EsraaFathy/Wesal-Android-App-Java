@@ -132,8 +132,6 @@ public class Home_Activity extends AppCompatActivity  {
             }
         });
     }
-
-
     // retrieve data from firebase
     private void retrieveCharitiesProfiles() {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("CharityProfiles");
