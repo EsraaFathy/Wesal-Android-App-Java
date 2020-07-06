@@ -65,4 +65,7 @@
     <string name="email">Email</string>
     <string name="optional">(Optional)</string>
     <string name="message">Message</string>
+    <string name="type_a_message">type a message</string>
+    <string name="have_an_id">Have an Id?</string>
+    <string name="enter_it_here">Enter it Here</string>
 </resources>
