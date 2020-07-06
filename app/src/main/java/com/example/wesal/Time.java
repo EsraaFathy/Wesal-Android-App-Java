@@ -93,7 +93,9 @@ public class Time extends Fragment {
         getIDHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
+                Intent intent=new Intent(getActivity(),VoulnteringApplication.class);
+                intent.putExtra("CharityId",ID);
+                startActivity(intent);
             }
         });
 

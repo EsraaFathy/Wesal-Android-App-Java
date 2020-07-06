@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.wesal.databinding.ActivityChartiesCatigoryBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -21,6 +22,20 @@ public class Charties_Catigory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_charties__catigory);
+        if (getSupportActionBar()!= null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+        binding.actionParActivityCharities.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
+
+
         Intent intent = getIntent();
         CharityId = intent.getStringExtra("CharityId");
         NavigationID = intent.getStringExtra("NavigationID");

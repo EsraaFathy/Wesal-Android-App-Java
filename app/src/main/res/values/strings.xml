@@ -68,4 +68,6 @@
     <string name="type_a_message">type a message</string>
     <string name="have_an_id">Have an Id?</string>
     <string name="enter_it_here">Enter it Here</string>
+    <string name="success">Success</string>
+    <string name="some_error_acurate_try_again">some error accurate try again</string>
 </resources>
