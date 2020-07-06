@@ -59,4 +59,10 @@
     <string name="time">Time</string>
     <string name="for_volunteers_only">For volunteers Only</string>
     <string name="incorrect_id">Incorrect ID</string>
+    <string name="get_id">Get ID</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="enter_you_phone_number">Enter you phone number</string>
+    <string name="email">Email</string>
+    <string name="optional">(Optional)</string>
+    <string name="message">Message</string>
 </resources>
