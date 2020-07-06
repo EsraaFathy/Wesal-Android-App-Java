@@ -1,6 +1,7 @@
 package com.example.wesal;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -85,6 +86,14 @@ public class Time extends Fragment {
                     Toast.makeText(getContext(), R.string.incorrect_id, Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        TextView getIDHere=view.findViewById(R.id.getIDHere);
+        getIDHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
             }
         });
 

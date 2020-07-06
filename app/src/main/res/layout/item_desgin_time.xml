@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="30dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="7">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewItemTime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_weight="1.5"
+        android:contentDescription="@string/charaity_pic" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleOfItemTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/charity_name"
+            android:textColor="@color/greenLight"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/contentItemDesign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/charity_name"
+            android:textColor="@color/greenLight"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:paddingVertical="10dp"
+        android:id="@+id/timeItemTime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:drawableBottom="@drawable/ic_rightk_24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
+        android:text="@string/time"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>
