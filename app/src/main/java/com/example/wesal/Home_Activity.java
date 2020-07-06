@@ -3,12 +3,17 @@ package com.example.wesal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
+
+import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +21,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
 import com.example.wesal.databinding.HomeActivityBinding;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -27,12 +33,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Home_Activity extends AppCompatActivity  {
+public class Home_Activity extends AppCompatActivity {
 
     HomeActivityBinding homeActivityBinding;
     String ID;
     ArrayList<String> charitiesID = new ArrayList<>();
     ArrayList<String> charitiesNames = new ArrayList<>();
+    ArrayList<String> phoneNumbers = new ArrayList<>();
+    String phoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +57,11 @@ public class Home_Activity extends AppCompatActivity  {
         homeActivityBinding.donateBloodHomeActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID!=null){
+                if (ID != null) {
                     intent.putExtra("NavigationID", "1");
                     intent.putExtra("CharityId", ID);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(Home_Activity.this, R.string.choose_charity_frist, Toast.LENGTH_SHORT).show();
                 }
 
@@ -62,11 +70,11 @@ public class Home_Activity extends AppCompatActivity  {
         homeActivityBinding.donateMaterialHomeActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID!=null){
+                if (ID != null) {
                     intent.putExtra("NavigationID", "2");
                     intent.putExtra("CharityId", ID);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(Home_Activity.this, R.string.choose_charity_frist, Toast.LENGTH_SHORT).show();
                 }
 
@@ -75,11 +83,11 @@ public class Home_Activity extends AppCompatActivity  {
         homeActivityBinding.donateMoneyHomeActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID!=null){
+                if (ID != null) {
                     intent.putExtra("NavigationID", "3");
                     intent.putExtra("CharityId", ID);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(Home_Activity.this, R.string.choose_charity_frist, Toast.LENGTH_SHORT).show();
                 }
 
@@ -88,11 +96,11 @@ public class Home_Activity extends AppCompatActivity  {
         homeActivityBinding.donateTimeHomeActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID!=null){
+                if (ID != null) {
                     intent.putExtra("NavigationID", "4");
                     intent.putExtra("CharityId", ID);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(Home_Activity.this, R.string.choose_charity_frist, Toast.LENGTH_SHORT).show();
                 }
 
@@ -101,14 +109,25 @@ public class Home_Activity extends AppCompatActivity  {
         homeActivityBinding.charityProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ID!=null){
+                if (ID != null) {
                     Intent intent = new Intent(Home_Activity.this, CharityProfile.class);
                     intent.putExtra("CharityId", ID);
                     startActivity(intent);
-                }else{
+                } else {
                     Toast.makeText(Home_Activity.this, R.string.choose_charity_frist, Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        homeActivityBinding.callHomeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
+                if (ActivityCompat.checkSelfPermission(Home_Activity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(intent);
             }
         });
     }
@@ -124,6 +143,8 @@ public class Home_Activity extends AppCompatActivity  {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ID=charitiesID.get(position);
+                phoneNumber=phoneNumbers.get(position);
+
             }
 
             @Override
@@ -141,6 +162,7 @@ public class Home_Activity extends AppCompatActivity  {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     charitiesNames.add((String) postSnapshot.child("charityName").getValue());
                     charitiesID.add((String) postSnapshot.child("uniqueKey").getValue());
+                    phoneNumbers.add((String) postSnapshot.child("Phone").getValue());
                 }
                 spinnerMethod();
             }
