@@ -31,5 +31,30 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.636"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy Right © 2020 Wesal"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/designby"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.636"/>
+    <TextView
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Design by FCI-Team"
+        android:gravity="center"
+        android:id="@+id/designby"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.636"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

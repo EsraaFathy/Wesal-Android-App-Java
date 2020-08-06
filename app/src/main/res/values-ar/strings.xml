@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Wesal</string>
+    <string name="donate_products">تبرع تبرعات عينية</string>
+    <string name="sharing_activity">تابع اهم الاحداث</string>
+    <string name="choose_the_charity">اختر جمعية خيرية</string>
+    <string name="search_for_blood">ابحث عن الدم</string>
+    <string name="donate_money">تبرع بالمال</string>
+    <string name="call">اتصل</string>
+    <string name="home">الشاشة الرئيسية</string>
+    <string name="donate_bold">تبرع بالدم</string>
+    <string name="donate_time">تبرع بالوقت</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">الاسم</string>
+    <string name="address">العنوان</string>
+    <string name="phone_number">رقم الموبايل</string>
+    <string name="notes">ملاحظات</string>
+    <string name="add_image">اضف صورة</string>
+    <string name="submit">تسجيل</string>
+    <string name="select_your_blood_type">اختر فصيلة دمك</string>
+    <string name="enter_your_id" tools:ignore="TypographyEllipsis">ادخل ال ID</string>
+    <string name="enter">ادخل</string>
+    <string name="choose_material_type">اختر نوع التبرعات العينية</string>
+
+    <string-array name="Blood_Types">
+        <item>select your blood type</item>
+        <item>O-</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>A+</item>
+        <item>B-</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string-array name="matrial_typies">
+        <item>ملابس</item>
+        <item>دواء</item>
+        <item>اثاث</item>
+        <item>اشياء اخرى</item>
+    </string-array>
+    <string name="title_activity_search_map">Map</string>
+    <string name="data_recorded">تم تسجيل البيانات</string>
+    <string name="missed_data">داتا مفقودة</string>
+    <string name="enter_correct_data">ادخل بيانات صحيحة</string>
+    <string name="ok">تم</string>
+    <string name="some_error_accurate">بعض المشاكل حدثت</string>
+    <string name="choose_charity_frist">اختر جمعية اولا</string>
+    <string name="charity_name">اسم الجمعية</string>
+    <string name="charaity_pic">صورة الجمعية</string>
+    <string name="about">عن</string>
+    <string name="chech_the_connection">تاكد من الاتصال بالانترنت</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="your_location">موقعك</string>
+    <string name="don_t_have_an_id">ليس لديك ID؟</string>
+    <string name="get_id_her">احصل على واحد</string>
+    <string name="time">وقت</string>
+    <string name="for_volunteers_only">للمتطوعين فقط</string>
+    <string name="incorrect_id">ID خاطئ</string>
+    <string name="get_id">احصل على ID</string>
+    <string name="enter_your_name">ادخل اسمك</string>
+    <string name="enter_you_phone_number">ادخل رقم الموبايل</string>
+    <string name="email">ايميل</string>
+    <string name="optional">(اختيارى)</string>
+    <string name="message">رسالة</string>
+    <string name="type_a_message">اكتب رسالة</string>
+    <string name="have_an_id">ليس لديك ID؟</string>
+    <string name="enter_it_here">احصل عليه</string>
+    <string name="success">ناجح</string>
+    <string name="some_error_acurate_try_again">حدثت بعض المشاكل حاول مرة اخرى</string>
+</resources>

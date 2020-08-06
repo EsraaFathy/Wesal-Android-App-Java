@@ -105,11 +105,11 @@ public class Time extends Fragment {
 
     private void fitchRecyclerView(View view) {
 
-        timeModelList.add(new TimeModel(R.drawable.logo, "wesal", "we are wesal", "12:00"));
-        timeModelList.add(new TimeModel(R.drawable.logo, "wesal", "we are wesal", "12:00"));
-        timeModelList.add(new TimeModel(R.drawable.logo, "wesal", "we are wesal", "12:00"));
-        timeModelList.add(new TimeModel(R.drawable.logo, "wesal", "we are wesal", "12:00"));
-        timeModelList.add(new TimeModel(R.drawable.logo, "wesal", "we are wesal", "12:00"));
+        timeModelList.add(new TimeModel(R.drawable.stopwatch, "رسالة الزقازيق", "sorting clothes", "12:00 pm"));
+        timeModelList.add(new TimeModel(R.drawable.stopwatch, "رسالة الزقازيق", "food distribution", "01:00 pm"));
+        timeModelList.add(new TimeModel(R.drawable.stopwatch, "رسالة الزقازيق", "lecture for kids", "03:30 pm"));
+        timeModelList.add(new TimeModel(R.drawable.stopwatch, "رسالة الزقازيق", "sorting drug", "10:00 am"));
+        timeModelList.add(new TimeModel(R.drawable.stopwatch, "رسالة الزقازيق", "Receiving new volunteers", "02:30 pm"));
 
         recyclerView = view.findViewById(R.id.timeRecycler);
         recyclerView.setHasFixedSize(true);
